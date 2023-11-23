@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Imtiyaz Hussain</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href='style.css' rel='stylesheet'>
+
+<style>
+    #projects {
+        margin: 80px auto 15px;
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-start;
+        width: 80%;
+        padding: 25px 25px 0px;
+
+    }
+
+    .heading-project {
+        font-size: 2rem;
+        color: whitesmoke;
+        text-decoration: underline;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+        margin: auto 0px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown i {
+        font-size: 1.3rem;
+    }
+
+    .dropbtn {
+        margin: auto;
+        justify-content: center;
+        display: flex;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: max-content;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: #161515;
+        padding: 8px 10px;
+        text-decoration: none;
+        display: block;
+        font-size: 1.3rem;
+
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #about div {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 15px;
+    }
+
+    #about div img {
+        max-width: 100%;
+    }
+
+    #about div h2 a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #about div h2 a:hover {
+        color: whitesmoke;
+        text-decoration: underline;
+    }
+
+    #about div h1 i {
+        margin: auto 5px;
+        color: tomato;
+    }
+
+    #about div p {
+        border: none;
+        box-shadow: none;
+    }
+
+    @media(max-width : 700px) {
+        #projects {
+            margin-top: 45px;
+            width: 95%;
+        }
+
+        .heading-project {
+            font-size: 1.7rem;
+        }
+
+        .dropdown i {
+            font-size: 1rem;
+        }
+
+        .dropdown-content a {
+            font-size: 1.2rem;
+        }
+    }
+</style>
+
+<body>
+    <div id="main-body">
+        <header id="header">
+            <a href="index.html" id="logo"><i class='bx bxl-magento'></i></a>
+
+            <nav>
+                <ul id="header-navbar">
+                    <div id="responsive-nav-cancel"><i class='bx bxs-x-circle'></i></div>
+                    <li><a href="index.html">About </a></li>
+                    <li><a href="resume.html">Resume </a></li>
+                    <li><a href="#" class="active">Projects </a></li>
+                    <li><a href="contact.html">Contact Us </a></li>
+                </ul>
+            </nav>
+
+            <div id="responsive-nav"><i class='bx bx-menu'></i></div>
+
+        </header>
+
+        <section id="projects">
+            <a class="heading-project">Projects</a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class='bx bx-chevron-down'></i></button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="#all">All</a>
+                    <a href="#webApp">Web App</a>
+                    <a href="#webDesign">Web Design</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div>
+                <h1 id="all"><i class='bx bx-globe'></i>All Projects</h1>
+            </div>
+
+            <div>
+                <h2> <a>1. The Kitchies - Online Delivery Restaurant</a></h2>
+                <h3>(Sep 2023 - Present)</h3>
+            </div>
+            <div>
+                <p>The website allows users to select their preferred dishes, and place orders for delivery or takeout.
+                    The website features a user-friendly interface, and a responsive design for seamless access. Users
+                    can securely make payments online.
+                </p>
+            </div>
+
+            <div id="webApp">
+                <h2> <a href="https://github.com/ImtiyazzH/Image-Upload-Editing">2. SnapEdit - Image Upload & In-Browser
+                        Editing Web App</a></h2>
+                <h3>(Nov 2023 - Nov 2023)</h3>
+            </div>
+            <div>
+                <p>It is an innovative web application designed to streamline the process of image uploading and editing
+                    directly within the browser. With a user-friendly interface, it allows users to enhance, customize,
+                    and transform their images effortlessly.
+                </p>
+            </div>
+            <div>
+                <img src="projects/snapEdit.png" alt="">
+            </div>
+
+            <div>
+                <h2> <a href="https://github.com/ImtiyazzH/Login-Form">3. Login-signup for a web App </a></h2>
+                <h3>(Oct 2023 - Oct 2023)</h3>
+            </div>
+            <div>
+                <p>The web app project involves creating a login/signup system. Users can sign up with their email and
+                    password, and their credentials are securely stored in Firebase. Upon successful signup, users can
+                    log in to access personalized content or features.
+                </p>
+            </div>
+            <div>
+                <img src="projects/login-weather.png" alt="">
+            </div>
+
+
+            <div>
+                <h2> <a href="https://github.com/ImtiyazzH/WeatherApp">4. Weather Forecast Web App</a></h2>
+                <h3>(May 2023 - Jun 2023)</h3>
+            </div>
+            <div>
+                <p>The Weather Forecast project showcases my skills in web development, API integration, and user
+                    experience design, making it a valuable tool for those seeking accurate and up-to-date weather
+                    information.
+                </p>
+            </div>
+            <div>
+                <img src="projects/weatherApp.png" alt="">
+            </div>
+
+
+            <div id="webDesign">
+                <h2> <a href="https://github.com/ImtiyazzH/Restaurant-Website">5. Front End Restaurant Website</a></h2>
+                <h3>(May 2023 - Jun 2023)</h3>
+            </div>
+            <div>
+                <p>The website features high-quality images of delectable dishes, and a user-friendly navigation system.
+                    Visitors are greeted with an elegant landing page that showcases the restaurant's ambiance and a
+                    prominent reservation button for ease of access.
+                </p>
+            </div>
+            <div>
+                <img src="projects/kitchies.png" alt="">
+            </div>
+            <div>
+                <img src="projects/drinks-kitchies.png" alt="">
+            </div>
+            <div>
+                <img src="projects/contact-kitchies.png" alt="">
+            </div>
+
+
+
+        </section>
+
+        <section id="footer">
+            <div class="copyright">
+                &copy; 2023 | Imtiyaz Hussain
+            </div>
+            <h3> All rights reserved.</h3>
+            <div>
+                <div id="about-social-connect">
+                  <div>
+                    <a href="https://www.linkedin.com/in/imtiyaz-hussain-73ba54136/"><i class='bx bxl-linkedin' id="linkedin"></i></a>
+                  </div>
+                  <div>
+                    <a href="https://instagram.com/imtiyazhussain__?igshid=OGQ5ZDc2ODk2ZA=="><i class='bx bxl-instagram-alt' id="instagram"></i></a>
+                  </div>
+                  <div>
+                    <a href="https://github.com/ImtiyazzH/"><i class='bx bxl-github' id="github"></i></a>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </div>
+
+    <script>
+        // Ham burger for responsive navbar
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.getElementById('responsive-nav');
+            const nav = document.querySelector('nav');
+            let cancel = document.getElementById("responsive-nav-cancel");
+
+            menuIcon.addEventListener('click', function () {
+                // Toggle the visibility of the navigation menu
+                nav.style.display = (nav.style.display === 'block') ? 'none' : 'block';
+                cancel.style.display = "block";
+            });
+            cancel.addEventListener('click', function () {
+                nav.style.display = "none"
+                cancel.style.display = "none";
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

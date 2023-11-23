@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Imtiyaz Hussain</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href='style.css' rel='stylesheet'>
+
+<style>
+    #home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 88px auto 0px;
+        width: 80%;
+    }
+
+    #home h1 {
+        text-align: center;
+        padding: 15px;
+        color: whitesmoke;
+        font-size: 2rem;
+        font-family: 'Ysabeau SC', sans-serif;
+        border-bottom: 3px solid burlywood;
+    }
+
+    #contactMe {
+        padding: 5px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        min-height: fit-content;
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    #contactMe div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        min-height: fit-content;
+        min-width: fit-content;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    #contactMe label {
+        font-size: 1.5rem;
+    }
+
+    #contactMe label span {
+        font-size: 1.5rem;
+        color: rgb(162, 30, 30);
+    }
+
+    #contactMe input {
+        font-size: 1.3rem;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid grey;
+        max-width: fit-content;
+        color: lightgray;
+    }
+
+    #contactMe input:focus {
+        outline: none;
+        color: whitesmoke;
+    }
+
+
+    #contactMe div button {
+        max-width: max-content;
+        padding: 7px 17px;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        background-color: rgb(68, 67, 67);
+        color: whitesmoke;
+        border: 2px solid black;
+    }
+
+    #contactMe div button:hover {
+        background-color: lightgrey;
+        color: black;
+        cursor: pointer;
+    }
+
+
+    @media(max-width : 700px) {
+        #home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 45px auto 0px;
+            padding: 15px;
+            width: 80%;
+        }
+
+        #about {
+            height: 67vh;
+            width: 95%;
+            padding: 15px 5px;
+        }
+
+        #contactMe label {
+            font-size: 1.2rem;
+        }
+
+        #contactMe input {
+            font-size: 1rem;
+            background: transparent;
+        }
+
+        #contactMe {
+            width: 90%;
+            gap: 1rem;
+        }
+
+        #contactMe div button {
+            font-size: 1.3rem;
+            margin: auto;
+        }
+    }
+</style>
+
+<body>
+    <div id="main-body">
+        <header id="header">
+            <a href="index.html" id="logo"><i class='bx bxl-magento'></i></a>
+
+            <nav>
+                <ul id="header-navbar">
+                    <div id="responsive-nav-cancel"><i class='bx bxl-magento'></i></div>
+                    <li><a href="index.html">About </a></li>
+                    <li><a href="resume.html">Resume </a></li>
+                    <li><a href="projects.html">Projects </a></li>
+                    <li><a href="#" class="active">Contact Us </a></li>
+                </ul>
+            </nav>
+
+            <div id="responsive-nav"><i class='bx bx-menu'></i></div>
+
+        </header>
+
+        <section id="home">
+            <h1>Let's Connect</h1>
+        </section>
+
+        <section id="about">
+            <form id="contactMe">
+                <div>
+                    <label>First Name <span>*</span></label>
+                    <input type="text" id="fname" name="fname" placeholder="Joe">
+                </div>
+                <div>
+                    <label>Last Name <span>*</span></label>
+                    <input type="text" id="lname" name="lname" placeholder="Rotrigue">
+                </div>
+                <div>
+                    <label>Email <span>*</span></label>
+                    <input type="email" id="phone" name="email" placeholder="email@example.com">
+                </div>
+                <div>
+                    <label>Comments/Questions <span>*</span> </label>
+                    <input type="text" id="comments" name="message" placeholder="Write your comments">
+                </div>
+                <div>
+                    <button id="submit" type="button" onclick="validateForm()">Submit</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section id="footer">
+            <div class="copyright">
+                &copy; 2023 | Imtiyaz Hussain
+            </div>
+            <h3> All rights reserved.</h3>
+            <div>
+                <div id="about-social-connect">
+                    <div>
+                        <a href="https://www.linkedin.com/in/imtiyaz-hussain-73ba54136/"><i class='bx bxl-linkedin'
+                                id="linkedin"></i></a>
+                    </div>
+                    <div>
+                        <a href="https://instagram.com/imtiyazhussain__?igshid=OGQ5ZDc2ODk2ZA=="><i
+                                class='bx bxl-instagram-alt' id="instagram"></i></a>
+                    </div>
+                    <div>
+                        <a href="https://github.com/ImtiyazzH/"><i class='bx bxl-github' id="github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Ham burger for responsive navbar
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.getElementById('responsive-nav');
+            const nav = document.querySelector('nav');
+            let cancel = document.getElementById("responsive-nav-cancel");
+
+            menuIcon.addEventListener('click', function () {
+                // Toggle the visibility of the navigation menu
+                nav.style.display = (nav.style.display === 'block') ? 'none' : 'block';
+                cancel.style.display = "block";
+            });
+            cancel.addEventListener('click', function () {
+                nav.style.display = "none"
+                cancel.style.display = "none";
+            });
+
+        });
+
+        function validateForm() {
+            const form = document.getElementById("contactMe");
+
+            const fname = form.elements["fname"].value.trim();
+            const lname = form.elements["lname"].value.trim();
+            const email = form.elements["email"].value.trim();
+            const message = form.elements["message"].value.trim();
+
+            // Simple email validation using regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (fname === "" ||lname === "" || email === "" || message === "") {
+               alert("Please fill in all fields.");
+            } else if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+            } else {
+                // If all validations pass, submit the form
+                submitForm();
+            }
+        }
+        function submitForm() {
+            let form = document.getElementById("contactMe");
+
+            const formData = new FormData(form);
+            const formEndpoint = 'https://formspree.io/imtiyazh2003@gmail.com';
+
+            fetch(formEndpoint, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert("Message sent successfully!");
+                    form.reset();
+                })
+                .catch(error => {
+                    alert("Oops! Something went wrong. Please try again.");
+                });
+        }
+    </script>
+
+</body>
+
+</html>

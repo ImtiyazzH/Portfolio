@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#main-body {
+    background-color: black;
+    color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#header {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    background-color: rgb(59, 57, 57);
+    color: whitesmoke;
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+    padding: 7px 20px;
+    z-index: 1;
+    top: 0px;
+    border-bottom: 4px solid darkgray;
+}
+
+#logo {
+    font-size: 4rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: azure;
+}
+
+nav {
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+#responsive-nav-cancel {
+    display: none;
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 15px;
+    left: 45%;
+}
+
+#header-navbar {
+    position: relative;
+    gap: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+#header-navbar li {
+    list-style: none;
+    padding: 7px 10px;
+}
+
+#header-navbar li a {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Young Serif', serif;
+}
+
+#header-navbar li a:hover,
+.active {
+    color: white;
+    border-bottom: 5px solid burlywood;
+}
+
+#responsive-nav {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 2.5rem;
+    display: none;
+}
+
+#home {
+    margin-top: 80px;
+    position: relative;
+    width: 100%;
+    min-height: fit-content;
+}
+
+#home video {
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+}
+
+#home div {
+    top: 10%;
+    position: absolute;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 0.7rem;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+#home div h1 {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: whitesmoke;
+}
+
+#about {
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    min-height: fit-content;
+    width: 80%;
+    gap: 1rem;
+
+}
+
+#about div {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+#about div h1 {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 2rem;
+    font-family: 'Ysabeau SC', sans-serif;
+    padding-bottom: 5px;
+    border-bottom: 5px solid burlywood;
+}
+
+#about div h2 {
+    font-size: 1.7rem;
+    padding-bottom: 5px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: white;
+}
+
+#about div h2 span {
+    font-size: 1.3rem;
+    color: whitesmoke;
+    font-weight: 500;
+
+}
+
+#about div p {
+    font-size: 1.5rem;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    /* background-color: #3a3a3a; */
+    padding: 5px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 2px 0px 10px rgba(147, 109, 109, 0.5);
+}
+
+
+#view-more {
+    font-size: 1.5rem;
+    background-color: #7f7d7d;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 2px 0px 10px rgba(61, 49, 49, 0.5);
+    position: absolute;
+    bottom: -10px;
+    /* z-index: 11; */
+    right: 15px;
+}
+
+#view-less {
+    display: none;
+    font-size: 1.5rem;
+    background-color: #7f7d7d;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 2px 0px 10px rgba(61, 49, 49, 0.5);
+    position: absolute;
+    bottom: -10px;
+    /* z-index: 11; */
+    right: 15px;
+}
+
+#about-continuation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    min-height: fit-content;
+    width: 80%;
+}
+
+#hide-show {
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    display: none;
+}
+
+#about-connect {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+#about-connect div {
+    width: 25%;
+    padding: 5px;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    gap: 1rem;
+    margin: auto;
+}
+
+#about-connect div h2 {
+    margin: auto 5px;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+#about-connect div i {
+    margin: auto 5px;
+    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    color: goldenrod;
+}
+
+#about-social-connect {
+    padding: 5px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#about-social-connect div i {
+    font-size: 1.3rem;
+    padding: 7px;
+    gap: 1rem;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+#linkedin {
+    color: skyblue;
+}
+
+#github {
+    color: black;
+}
+
+#instagram {
+    color: rgb(171, 55, 55);
+}
+
+#services {
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    min-height: fit-content;
+    width: 80%;
+    gap: 2rem;
+}
+
+#services div {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+#services div h1 {
+    text-align: left;
+    align-items: flex-start;
+    font-size: 2rem;
+    padding-bottom: 4px;
+    border-bottom: 5px solid burlywood;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+#services div div {
+    background: #181818;
+    padding: 25px;
+    border: 2px solid grey;
+    border-radius: 30px;
+    box-shadow: 2px 0px 10px rgb(161 159 159 / 50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#services div div h3 {
+    color: white;
+    font-size: 1.9rem;
+    font-family: 'Agdasima', sans-serif;
+    font-size: 1.9rem;
+}
+
+#services div div p {
+    font-size: 1.2rem;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.2rem;
+}
+
+
+
+#clients-heading {
+    margin: auto;
+    padding: 40px 10px;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+#clients-heading div h1 {
+    display: flex;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 4px;
+    border-bottom: 5px solid burlywood;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.review-container {
+    padding: 15px;
+    display: flex;
+    width: 400%;
+    gap: 1rem;
+    transition: transform 0.5s ease-in-out;
+}
+.review-card {
+    width: 50%;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 2px solid darkgray;
+    border-radius: 15px;
+    text-align: center;
+    margin: 10px auto;
+    gap: 0.5rem;
+    box-shadow: 2px 0px 10px rgba(147, 109, 109, 0.5);
+
+}
+
+.review-card h2 {
+    font-family: 'Agdasima', sans-serif;
+    font-size: 1.9rem;
+    padding: 15px 2px;
+    text-align: center;
+    color: lightgray;
+    letter-spacing: 0.2rem;
+}
+
+.review-card p {
+    padding: 15px 2px;
+    text-align: center;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+#prevBtn,
+#nextBtn {
+    background-color: burlywood;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+#review-move {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 5px;
+}
+
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.copyright {
+    margin: auto;
+    font-size: 1.6rem;
+    font-family: 'Agdasima', sans-serif;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    #header {
+        justify-content: space-between;
+        padding: 3px 15px;
+    }
+
+    #logo {
+        font-size: 2rem;
+    }
+
+    /* Show the menu icon on smaller screens */
+
+    #responsive-nav {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    /* Additional styles for the navigation menu */
+    nav {
+        padding-top: 40px;
+        height: 100%;
+        display: none;
+        position: fixed;
+        background-color: #000000;
+        color: white;
+        padding-left: 10px;
+        top: 0px;
+        right: 0px;
+        transition: 0.5s ease-in-out;
+        z-index: 1111;
+
+    }
+
+    #header-navbar {
+        justify-content: flex-start;
+        gap: 0.5rem;
+        flex-direction: column;
+        text-align: left;
+        height: 100%;
+    }
+
+    #header-navbar li a {
+        font-size: 1.2rem;
+        padding: 2px 15px;
+    }
+
+    #home {
+        margin-top: 44px;
+    }
+
+    #home div h1 {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: whitesmoke;
+    }
+
+    #about {
+        width: 95%;
+        padding: 15px 5px;
+    }
+
+    #about div {
+        flex-direction: column;
+        padding: 5px 8px;
+    }
+
+    #about div h1 {
+        font-size: 1.1rem;
+    }
+
+    #about div h2 {
+        font-size: 1rem;
+    }
+
+    #about div h3 {
+        font-size: 0.8rem;
+    }
+
+    #about div p {
+        font-size: 0.8rem;
+    }
+
+    #about div h2 span {
+        font-size: 1rem;
+    }
+
+    #about-continuation {
+        width: 95%;
+        padding: 15px 5px;
+    }
+
+    #about-connect {
+        padding: 1px;
+    }
+
+    #about-connect div {
+        width: 100%;
+        padding: 2px;
+        gap: 0.4rem;
+    }
+
+    #services {
+        width: 95%;
+        padding: 15px 5px;
+    }
+
+    #services div {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #services div div p {
+        font-size: 1rem;
+    }
+
+    #services div div h3 {
+        font-size: 1.3rem;
+        letter-spacing: 0.1rem;
+    }
+}
